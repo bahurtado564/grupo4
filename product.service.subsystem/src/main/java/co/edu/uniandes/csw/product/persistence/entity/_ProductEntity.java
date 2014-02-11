@@ -17,25 +17,6 @@ public abstract class _ProductEntity {
 	private Long id;
 	private String name;
 	private Long value;
-        private String descripcion;
-        private int unidades;
-
-    public String getDescripcion() {
-        return descripcion;
-    }
-
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
-    }
-
-    public int getUnidades() {
-        return unidades;
-    }
-
-    public void setUnidades(int unidades) {
-        this.unidades = unidades;
-    }
-
 
 	public Long getId(){
 		return id;

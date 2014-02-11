@@ -10,9 +10,6 @@ public abstract class _ProductDTO {
 	private Long id;
 	private String name;
 	private Long value;
-        private String descripcion;
-
-        private int unidades;
 
 	public Long getId() {
 		return id;
@@ -35,21 +32,4 @@ public abstract class _ProductDTO {
 	public void setValue(Long value) {
 		this.value = value;
 	}
-	
-        
-    public String getDescripcion() {
-        return descripcion;
-    }
-
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
-    }
-
-    public int getUnidades() {
-        return unidades;
-    }
-
-    public void setUnidades(int cantidad) {
-        this.unidades = cantidad;
-    }
 }

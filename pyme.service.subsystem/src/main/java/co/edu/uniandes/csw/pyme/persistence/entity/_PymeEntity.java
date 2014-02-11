@@ -17,26 +17,7 @@ public abstract class _PymeEntity {
 	@GeneratedValue(generator = "Pyme")
 	private Long id;
 	private String description;
-        private String propietario;
-        private String sector;
-
-    public String getPropietario() {
-        return propietario;
-    }
-
-    public void setPropietario(String propietario) {
-        this.propietario = propietario;
-    }
-
-    public String getSector() {
-        return sector;
-    }
-
-    public void setSector(String sector) {
-        this.sector = sector;
-    }
-
-
+       
 	public String getName(){
 		return name;
 	}

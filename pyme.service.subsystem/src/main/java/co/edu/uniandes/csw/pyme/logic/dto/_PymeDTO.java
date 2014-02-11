@@ -11,24 +11,6 @@ public abstract class _PymeDTO {
 	private String name;
 	private Long id;
 	private String description;
-        private String sector;
-        private String propietario;
-
-    public String getSector() {
-        return sector;
-    }
-
-    public void setSector(String sector) {
-        this.sector = sector;
-    }
-
-    public String getPropietario() {
-        return propietario;
-    }
-
-    public void setPropietario(String propietario) {
-        this.propietario = propietario;
-    }
 
 	public String getName() {
 		return name;
