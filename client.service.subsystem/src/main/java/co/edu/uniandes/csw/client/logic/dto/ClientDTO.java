@@ -3,7 +3,7 @@ package co.edu.uniandes.csw.client.logic.dto;
 public class ClientDTO extends _ClientDTO 
 {
         
-    //Nuevos atributos y si métodos getters y settes
+    //Nuevos atributos y si métodos getters y settes Prubea
     
     /**
      * Atributo que modela el sexo del cliente
