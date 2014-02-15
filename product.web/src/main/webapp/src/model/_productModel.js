@@ -8,7 +8,8 @@ define([], function() {
                   ,  
 		 'descripcion' : ''
                   ,  
-		 'unidades' : ''
+		 'unidades' : '',
+                 'imagen' : ''
         },
         initialize: function() {
         },

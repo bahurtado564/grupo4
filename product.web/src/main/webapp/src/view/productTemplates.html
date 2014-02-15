@@ -8,6 +8,7 @@
 		 <th>value</th>
                  <th>descripcion</th>
                  <th>unidades</th>
+                 <th>imagen</th>
     <th>Actions</th>
     </tr>
     </thead>
@@ -18,13 +19,18 @@
 		<td><%= htmlEncode(product.getDisplay('value')) %></td>
                 <td><%= htmlEncode(product.getDisplay('descripcion')) %></td>
                 <td><%= htmlEncode(product.getDisplay('unidades')) %></td>
+                <td><img src="<%= htmlEncode(product.getDisplay('imagen')) %>" width="40px" /></td>
+                
+                
     <td>
+ 
     <% if(showEdit) {%>
     <a onclick="Backbone.trigger('<%= componentId %>-product-edit',{id:<%= product.id %>}); return false" >Edit</a> |
 	<% } %> 
 	<% if(showDelete) {%>
     <a onclick="Backbone.trigger('<%= componentId %>-product-delete',{id:<%= product.id %>}); return false" >Delete</a> 
-	<% } %>    
+	<% } %> 
+       
 	</td>
     </tr>
     <% }); %>
@@ -55,6 +61,12 @@
 		<label for="unidades">unidades</label>
     	<input type="text" class="form-control" id="unidades" name="unidades" placeholder="Enter value" value="<%= product.get('unidades') %>"/>	
 		</div>
+                <div class="form-group" >
+		<label for="imagen">URL Imagen</label>
+    	<input type="text" class="form-control" id="imagen" name="imagen" placeholder="Enter value" value="<%= product.get('imagen') %>"/>	
+		</div>
+               
+                
     </form>
     </div>
 </script> 
