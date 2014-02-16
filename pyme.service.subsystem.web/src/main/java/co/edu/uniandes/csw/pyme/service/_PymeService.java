@@ -24,6 +24,12 @@ public abstract class _PymeService {
 		return pymeLogicService.createPyme(pyme);
 	}
 	
+        @POST
+        @Path("/search")
+        public List<PymeDTO> searchUser(PymeDTO user){
+        return this.pymeLogicService.getPymes();
+        }
+    
 	@DELETE
 	@Path("{id}")
 	public void deletePyme(@PathParam("id") Long id){
