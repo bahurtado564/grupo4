@@ -151,17 +151,7 @@ define(['model/pymeModel'], function(pymeModel) {
                 self.$el.slideDown("fast");
             });
         },
-        postInit: function(options) {
-            var self = this;
-            this.searchTemplate = _.template($('#pymeSearch').html()+$('#pymeList').html());
- 
-            Backbone.on(this.componentId + '-' + 'toolbar-search', function(params) {
-                self.search(params);
-            });
-            Backbone.on(this.componentId+'-pyme-search', function(params) {
-                self.pymeSearch(params);
-            });
-        },
+        
          _renderSearch: function(params) {
  
             var self = this;
