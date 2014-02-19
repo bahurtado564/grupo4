@@ -11,7 +11,12 @@ postInit: function(options) {
             Backbone.on(this.componentId+'-pyme-search', function(params) {
                 self.pymeSearch(params);
             });
-        },
+             Backbone.on('user-model-error', function(params) {
+                var error = params.error;
+                Backbone.trigger(self.componentId + '-' + 'error', 
+                         {event: 'user-model', view: self, error:{ responseText: error}});
+            });
+        }
     });
     return App.Controller.PymeController;
 }); 

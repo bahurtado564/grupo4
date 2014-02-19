@@ -1,6 +1,13 @@
 define(['delegate/_PymeDelegate'], function() {
-    App.Delegate.PymeDelegate = App.Delegate._PymeDelegate.extend({
-        search: function(pyme, callback, callbackError) {
+//    App.Delegate.PymeDelegate = App.Delegate._PymeDelegate.extend({
+//        
+//        
+//        
+//    });
+
+    App.Delegate.PymeDelegate = {
+ 
+        search: function(Pyme, callback, callbackError) {
             console.log('Pyme Search: ');
             $.ajax({
                 url: '/pyme.service.subsystem.web/webresources/Pyme/search',
@@ -13,5 +20,5 @@ define(['delegate/_PymeDelegate'], function() {
                 callbackError(data);
             }, this));
         }
-    });
+    };
 });

@@ -1,7 +1,13 @@
 define([], function() {
-    App.Delegate._PymeDelegate = App.Delegate.PymeDelegate || {
-        
-        search: function(pyme, callback, callbackError) {
+   
+//    App.Delegate._PymeDelegate = App.Delegate.PymeDelegate || {
+//        
+//        
+//    };
+
+    App.Delegate.PymeDelegate = {
+ 
+        search: function(Pyme, callback, callbackError) {
             console.log('Pyme Search: ');
             $.ajax({
                 url: '/pyme.service.subsystem.web/webresources/Pyme/search',

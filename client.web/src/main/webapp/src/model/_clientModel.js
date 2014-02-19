@@ -20,6 +20,9 @@ define([], function() {
     App.Model._ClientList = Backbone.Collection.extend({
         model: App.Model._ClientModel,
         initialize: function() {
+            if(self.postInit){
+                self.postInit();
+            }
         }
 
     });
