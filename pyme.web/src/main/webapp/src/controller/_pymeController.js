@@ -156,7 +156,7 @@ define(['model/pymeModel'], function(pymeModel) {
             });
         },
         
-         _renderSearch: function(params) {
+         _renderSearch: function() {
             
             
              var self = this;
@@ -178,7 +178,7 @@ define(['model/pymeModel'], function(pymeModel) {
         },
         searchP: function(pyme, callback, callbackError) {
             console.log('Pyme Search: ');
-            alert("2");
+            
             $.ajax({
                 
                 url: '/pyme.service.subsystem.web/webresources/Pyme/search',
@@ -196,18 +196,19 @@ define(['model/pymeModel'], function(pymeModel) {
             var model = $('#' + this.componentId + '-pymeForm').serializeObject();
             this.currentPymeModel.set(model);
             
-            alert("1");  
+             
             self.searchP(self.currentPymeModel, function(data) {
-                alert("3");
+                
                 self.pymeModelList=new App.Model.PymeList();
                 _.each(data,function(d){
                     var model=new App.Model.PymeModel(d);
-                    alert("4");
+                   
                    self.pymeModelList.models.push(model);
                    
                    
                 });
-                self._renderSearch(params);
+                //Sin params
+                self._renderSearch();
             }, 
             
             function(data) {

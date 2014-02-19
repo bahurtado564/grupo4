@@ -2,7 +2,7 @@ define(['model/_clientModel'], function() {
     App.Model.ClientModel = App.Model._ClientModel.extend({
          initialize:function(parameters){
             this.on('invalid',function(model,error){
-                Backbone.trigger('user-model-error', {error: error});
+                Backbone.trigger('client-model-error', {error: error});
             });
         },
  

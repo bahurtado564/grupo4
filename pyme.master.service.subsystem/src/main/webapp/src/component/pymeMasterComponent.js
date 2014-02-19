@@ -18,6 +18,9 @@ define(['controller/selectionController', 'model/cacheModel', 'model/pymeMasterM
             Backbone.on(uComponent.componentId + '-post-pyme-create', function(params) {
                 self.renderChilds(params);
             });
+            Backbone.on('pyme-master-model-error', function(error) {
+                Backbone.trigger(uComponent.componentId + '-' + 'error', {event: 'pyme-master-save', view: self, error: {responseText:error}});
+            });
             Backbone.on(uComponent.componentId + '-post-pyme-edit', function(params) {
                 self.renderChilds(params);
             });

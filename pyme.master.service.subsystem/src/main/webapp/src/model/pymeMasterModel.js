@@ -1,12 +1,12 @@
 define(['model/_pymeMasterModel'], function() { 
     App.Model.PymeMasterModel = App.Model._PymeMasterModel.extend({
-initialize: function() {
+        initialize: function() {
             this.on('invalid', function(model,error) {
-                Backbone.trigger('user-master-model-error', error);
+                Backbone.trigger('pyme-master-model-error', error);
             });
         },
         validate: function(attrs, options){
-            return new App.Model.UserModel().validate(attrs.userEntity,options);
+            return new App.Model.PymeModel().validate(attrs.pymeEntity,options);
         }
     });
 

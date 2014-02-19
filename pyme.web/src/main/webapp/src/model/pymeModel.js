@@ -1,8 +1,9 @@
+
 define(['model/_pymeModel'], function() {
     App.Model.PymeModel = App.Model._PymeModel.extend({
         initialize:function(parameters){
             this.on('invalid',function(model,error){
-                Backbone.trigger('user-model-error', {error: error});
+                Backbone.trigger('pyme-model-error', {error: error});
             });
         },
  

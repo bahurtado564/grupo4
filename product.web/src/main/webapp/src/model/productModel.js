@@ -2,7 +2,7 @@ define(['model/_productModel'], function() {
     App.Model.ProductModel = App.Model._ProductModel.extend({
         initialize:function(parameters){
             this.on('invalid',function(model,error){
-                Backbone.trigger('user-model-error', {error: error});
+                Backbone.trigger('product-model-error', {error: error});
             });
         },
  
